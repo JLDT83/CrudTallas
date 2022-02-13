@@ -1,0 +1,39 @@
+
+<%- include layouts/header.ejs %>
+<div class="container px-5 my-5">
+    <h1><%= title %></h1>
+    <form action="/create" method="post" id="CrearForm" data-sb-form-api-token="API_TOKEN">
+        <div class="form-floating mb-3">
+            <input class="form-control" id="Country" name="Country"type="text" placeholder="Pais" data-sb-validations="required" />
+            <label for="pais">Pais</label>
+            <div class="invalid-feedback" data-sb-feedback="pais:required">Pais is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="FemaleHeight" name="FemaleHeight" type="text" placeholder="Altura de Mujer (cm)" data-sb-validations="required" />
+            <label for="alturaDeMujerCm">Altura de Mujer (cm)</label>
+            <div class="invalid-feedback" data-sb-feedback="alturaDeMujerCm:required">Altura de Mujer (cm) is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="FemaleHeightInch" name="FemaleHeightInch" type="text" placeholder="Altura de Mujer (in)" data-sb-validations="required" />
+            <label for="alturaDeMujerIn">Altura de Mujer (ft)</label>
+            <div class="invalid-feedback" data-sb-feedback="alturaDeMujerIn:required">Altura de Mujer (in) is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="MaleHeight" name="MaleHeight"type="text" placeholder="Altura de Hombre(cm)" data-sb-validations="required" />
+            <label for="alturaDeHombreCm">Altura de Hombre(cm)</label>
+            <div class="invalid-feedback" data-sb-feedback="alturaDeHombreCm:required">Altura de Hombre(cm) is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="MaleHeightInch" name="MaleHeightInch" type="text" placeholder="Altura de Hombre(in)" data-sb-validations="required" />
+            <label for="alturaDeHombreIn">Altura de Hombre(ft)</label>
+            <div class="invalid-feedback" data-sb-feedback="alturaDeHombreIn:required">Altura de Hombre(in) is required.</div>
+        </div>
+        
+            <button class="btn btn-primary " tabindex="5" type="submit">Guardar</button>
+         
+        <a href="/" class="btn btn-secondary ">Cancelar </a>
+    </form>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<%- include layouts/footer.ejs %>
